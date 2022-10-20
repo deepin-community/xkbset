@@ -1,0 +1,20 @@
+From: Rene Engelhard <rene@debian.org>
+Subject: Fix install locations in Makefile
+
+---
+ Makefile |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+--- a/Makefile
++++ b/Makefile
+@@ -1,8 +1,8 @@
+ X11PREFIX=/usr/local
+ X11BASE=/usr/local
+ 
+-INSTALL_BIN=${DESTDIR}${X11PREFIX}/bin
+-INSTALL_MAN1=${DESTDIR}${X11PREFIX}/man/man1
++INSTALL_BIN=${DESTDIR}/usr/bin
++INSTALL_MAN1=${DESTDIR}/usr/share/man/man1
+ 
+ INC_PATH=-I${X11BASE}/include
+ LIB_PATH=-L${X11BASE}/lib
